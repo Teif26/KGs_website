@@ -1,0 +1,28 @@
+html, body, p, h1, div {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  text-align: center;
+}
+
+.name-header {
+  height: 100px;
+  background: #333;
+}
+
+.img-wrapper {
+  background-image: url("/assets/cbd-oil-legal.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  opacity: .9;
+  -webkit-filter: saturate(200%);
+          filter: saturate(200%);
+  -webkit-filter: hue-rotate(240deg);
+          filter: hue-rotate(240deg);
+}
+/*# sourceMappingURL=style.css.map */
