@@ -1,28 +1,119 @@
-html, body, p, h1, div {
+body, p, h1, div {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html, body {
+body {
   text-align: center;
+  top: 0px;
+}
+
+ul, li, a {
+  margin-top: 10px;
+  text-decoration: none;
+  list-style: none;
+  font-family: monospace;
+  font-size: 26px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 0;
+  -ms-grid-columns: (fr)[3];
+      grid-template-columns: repeat(3, fr);
+  -ms-grid-rows: 40px;
+      grid-template-rows: 40px;
+      grid-template-areas: "fe about products";
+  justify-items: center;
+  align-self: baseline;
+}
+
+.features {
+  grid-area: "fe";
+}
+
+.about {
+  grid-area: "about";
+}
+
+.products {
+  grid-area: "products";
 }
 
 .name-header {
-  height: 100px;
-  background: #333;
+  height: 50px;
+  background: #783333;
 }
 
 .img-wrapper {
-  background-image: url("/assets/cbd-oil-legal.jpg");
-  background-size: cover;
   height: 100vh;
   width: 100vw;
-  opacity: .9;
-  -webkit-filter: saturate(200%);
-          filter: saturate(200%);
-  -webkit-filter: hue-rotate(240deg);
-          filter: hue-rotate(240deg);
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#783333), color-stop(42.08%, rgba(206, 8, 8, 0.45)), to(rgba(255, 255, 255, 0))), #FFFFFF;
+  background: linear-gradient(180deg, #783333 0%, rgba(206, 8, 8, 0.45) 42.08%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  mix-blend-mode: normal;
+  z-index: -2;
+}
+
+.svg1 {
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.7));
+}
+
+.svgbox {
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: calc(50% - 287px/2 + 12.5px);
+}
+
+.svgbox::before, .svgbox::after {
+  letter-spacing: 10px;
+  font-family: sans-serif;
+  font-size: 44px;
+  color: #783333;
+  height: 100%;
+  position: absolute;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.svgbox::before {
+  top: 45px;
+  height: 50px;
+  width: 140%;
+  background: yellow;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  z-index: 2;
+  border-radius: 10px 0px 0px 10px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  content: "QUIK";
+}
+
+.svgbox::after {
+  content: "STOP";
+  top: 45px;
+  height: 50px;
+  width: 130%;
+  background: yellow;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  z-index: -2;
+  border-radius: 0px 10px 10px 0px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
